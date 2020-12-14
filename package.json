@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EnesAlesevic/Mistral.git"
+    "url": "git+https://github.com/EnesAlesevic/NopCommerce.git"
   },
   "author": "Enes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EnesAlesevic/Mistral/issues"
+    "url": "https://github.com/EnesAlesevic/NopCommerce/issues"
   },
-  "homepage": "https://github.com/EnesAlesevic/Mistral#readme",
+  "homepage": "https://github.com/EnesAlesevic/NopCommerce#readme",
   "dependencies": {
     "cypress": "^6.1.0"
   }
