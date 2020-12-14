@@ -31,7 +31,7 @@ describe('NopCommerce test', () => {
 
     describe('Test search functionalities', () => {
 
-        it('Type a not existing item in search bar', ()=>{
+        it('Type a not existing item in search bar', () => {
             cy.get('#small-searchterms').type('Not existing item')
         })
 
@@ -39,8 +39,8 @@ describe('NopCommerce test', () => {
             cy.get('#small-search-box-form > .button-1').click()
         })
 
-        it('Assure no results found message is displayed', ()=>{
-            cy.get('.no-result').then(($div)=>{
+        it('Assure no results found message is displayed', () => {
+            cy.get('.no-result').then(($div) => {
                 expect($div.text()).to.contain('No products were found that matched your criteria.')
             })
         })
@@ -152,6 +152,10 @@ describe('NopCommerce test', () => {
 
         it('Open drop down menu', () => {
             cy.get('#topcartlink').trigger('mouseover')
+        })
+
+        it('Assure Drop down is open', () => {
+            cy.get('.mini-shopping-cart').should('exist')
         })
 
         it('Assure correct item is added', () => {
