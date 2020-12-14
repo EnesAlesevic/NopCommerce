@@ -1,6 +1,10 @@
-Before setting up check whether you have Node.js Version 10.0 (or higher) set up on your machine as it's a requirement for running latest versions of Cypress.io
+# Read before setup:
 
-Select "Master" branch on this repository 
+Before setting up check whether you have Node.js Version 10.0 (or higher) set up on your machine as it's a requirement for running latest versions of Cypress.io.
+
+Select "Master" branch on this repository.
+
+Mobile version of this test is available via adjusting the wanted dimensions in cypress.json file, saving and restarting cypress in terminal. (Drop down menu might cause some issues during testing though, as it's not supposed to be displayed on mobile views)
 
 # Setting up the Project locally:
 
