@@ -59,7 +59,7 @@ describe('NopCommerce test', () => {
         //If the name of the item from data.json is the same to the one on this view component then the item is found
         it('Assure item is found', () => {
             cy.fixture('data.json').then((data) => {
-                cy.get('.product-title > a').then(($a) => {
+                cy.get(':nth-child(1) > .product-item > .details > .product-title > a').then(($a) => {
                     expect($a.text()).to.equal(data.devices.device1)
                 })
             })
@@ -81,7 +81,7 @@ describe('NopCommerce test', () => {
     describe('Product page check', () => {
 
         it('Click on Product link and open Product page', () => {
-            cy.get('.product-title > a').click()
+            cy.get(':nth-child(1) > .product-item > .details > .product-title > a').click()
         })
 
         //Making sure the query parameters are set correctly in the url 
@@ -239,12 +239,8 @@ describe('NopCommerce test', () => {
     //Clearing the Shopping Cart in order to return the selection to zero in order to avoid clashes with data between test runs
     describe('Clear Shopping Cart', () => {
 
-        it('Select items to remove', () => {
+        it('Remove item from Cart', () => {
             cy.get('tbody > tr > .remove-from-cart').click()
-        })
-
-        it('Click Update Shopping Cart button', () => {
-            cy.get('.update-cart-button').click()
         })
 
         it('Assure Shopping Cart is Empty', () => {
